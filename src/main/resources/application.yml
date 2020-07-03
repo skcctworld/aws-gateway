@@ -35,11 +35,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: order
+        - id: my-order
           uri: http://order:8080
           predicates:
             - Path=/orders/** 
-        - id: delivery
+        - id: my-delivery
           uri: http://delivery:8080
           predicates:
             - Path=/deliveries/**/cancellations/** 
